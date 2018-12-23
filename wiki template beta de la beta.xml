@@ -80,7 +80,7 @@
 	<link href='https://use.fontawesome.com/releases/v5.0.12/css/all.css' rel='stylesheet'/>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/magnific-popup.min.css' rel='stylesheet'/>
     <link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' rel='stylesheet'/>
-	    
+
 <script crossorigin='anonymous' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'/>
 	
 	<link href='//fonts.googleapis.com/css?family=Muli:300,300italic,regular,italic&amp;subsets=latin&amp;subset=latin,latin-ext' media='all' type='text/css'/>
@@ -4929,16 +4929,14 @@ function getUrlParam(param){
 #catalog .card-body table:first-child{
 	margin: auto;
 }
-#catalog .card-body table.autocollapse {
+/*#catalog .card-body table.autocollapse {
 	width: 100% !important;
 	table-layout:fixed !important;
-}
+}*/
 #catalog .card-body table.hlist {
 	display: table !important;
 }
-.card-body table.wikitable{
-	overflow-x: auto;
-}
+
 div.custom-popup::-webkit-scrollbar {
     width: 0.2em;
 }
@@ -5050,6 +5048,9 @@ div.custom-popup::-webkit-scrollbar-thumb {
 	position: absolute;
     right: 0;
     top: 0;
+}
+.mfp-counter{
+	color: #A20156;
 }
   .icon-apps{ display:none; }
 
@@ -5337,8 +5338,20 @@ div.custom-popup::-webkit-scrollbar-thumb {
 #toc ul, #toc ul &gt; ul{
  list-style: none;
 }
+#toc .tocnumber{
+	padding-left: 0;
+    padding-right: 0.5em;
+}
 .wikipost .row{
     margin-top:10px;
+}
+.wikipost a{
+	color: #007bff !important;
+}
+div.tright{
+    float: right;
+    clear: right;
+    margin: 0.5em 0 1.3em 1.4em;
 }
 a.external.text, a.external.free {
     background-repeat: no-repeat !important;
@@ -5356,42 +5369,36 @@ span.mw-editsection {
 #popups{
 	display: none;
 }
-#Container div.annot-nudge &gt; span &gt; span{
+#Container{
+	border: 1px solid #a2a9b1;
+	background-color: #f8f9fa;
+}
+/*#Container div.annot-nudge &gt; span &gt; span{
 	width: 50px;
 	height: 11px;
-}
+}*/
 #Container div.nudge{
 	/*top: 0.54em !important;*/
 }
-#Container .annot-nudge a{
+/*#Container .annot-nudge a{
 	font-size: 90%;
 	color: #0645ad;
 	letter-spacing: 0;
 }
 #Container .nudge a{
 	font-size: 80%;
-	color: #0645ad;
 	letter-spacing: 0;
-}
+}*/
 #Container a:visited{
 	color: #0b0080;
 }
-.hlist dd:after, .hlist li:after {
-    content: &quot; . &quot;;
-    font-weight: bold;
-	vertical-align: text-bottom;
+#Container a{
+    text-decoration: none;
+    color: #0645ad !important;
+    background: none;
 }
-.hlist dt li:first-child:before, .hlist  li dd:first-child:before, .hlist li dt:first-child:before, .hlist li li:first-child:before {
-    content: &quot; (&quot;;
-    font-weight: normal;
-}
-.hlist dt li:last-child:after, .hlist li dd:last-child:after, .hlist li dt:last-child:after, .hlist li li:last-child:after {
-    content: &quot;)&quot;;
-    font-weight: normal;
-}
-.hlist li:last-child:after {
-    content: &quot;&quot;;
-    font-weight: bold;
+#Container .bar .nudge span {
+    vertical-align: bottom !important;
 }
 #comment-holder .avatar-image-container {
     display: none;
@@ -5430,6 +5437,9 @@ span.mw-editsection {
 .mfp-arrow:active {
   margin-top: 0px;
 }
+.mw-redirect span{
+	font-size: 58% !important;
+}
 #gallery-info{
 	display: none;
 	position: relative;
@@ -5463,6 +5473,9 @@ span.mw-editsection {
 	/*height: 46px !important;*/
 	margin: 0px;
 }
+.mw-mmv-title-para .magnify{
+	display: none;
+}
 #catalog .card-header h5 a{
 	background: none !important;
 }
@@ -5485,7 +5498,7 @@ span.mw-editsection {
 	box-shadow: 1px 1px 2px #ddd;
 }
 .title div{
-	min-height: 60px;
+	/*min-height: 60px;*/
 	height: auto;
 	/*line-height: 60px;*/
 	padding: 10px 0px;
@@ -5493,9 +5506,11 @@ span.mw-editsection {
 	font-size: 20px;
 }
 .author-links div, .author-links p{
-	padding: 5px 20px;
 	font-size: 1em;
 	margin-bottom: 5px
+}
+.author-links div{
+	padding: 5px 20px;
 }
 .side-text p{
 	padding: 3px 3px;
@@ -5521,12 +5536,179 @@ span.mw-editsection {
 .side-text {
 	padding: 20px;
 }
+.mw-mmv-author ul {
+    list-style-type: none;
+    padding: 0px;
+}
+.mw-mmv-author ul li {
+    width: auto;
+    float: left;
+    margin: 0px 2px;
+}
 #gallery-info-container{
 	display: none;
 }
 .mfp-wrap #gallery-info img{
 	display: none;
 }
+span.mw-ext-cite-error{
+	display: none;
+}
+/* CSS to hide the view and edit links on sidebar container divs. */
+div#Caption div:first-child {
+    display: none;
+}
+/*#Contains-Timeline-Scale-Notes small {
+    display: none;
+}*/
+/* End of CSS to hide the view and edit links on sidebar container divs. */
+/* Catalog tables CSS */
+table.nowraplinks{
+  width: 100%;
+  /*background-color: #ccccff !important;*/
+  /* border: 0px; */
+  border-color: white;
+  table-layout: auto;
+  border-collapse: collapse;
+  /*margin-bottom: 20px;*/
+}
+table.nowraplinks td{
+  text-align: center;
+}
+table.nowraplinks th.navbox-title div.plainlinks{
+  display: none;
+}
+table.nowraplinks th.navbox-title div{
+  padding: 5px;
+}
+table.nowraplinks{
+  border-collapse: collapse;
+}
+table.nowraplinks td{
+  border-left: 2px solid white !important;
+  border-collapse: collapse;
+}
+tr + tr &gt; .navbox-group, tr + tr &gt; .navbox-abovebelow, tr + tr &gt; .navbox-list{
+  border-top: 2px solid white !important;
+}
+table.nowraplinks th.navbox-group{
+  padding: 5px 20px;
+  white-space: nowrap;
+  text-align: right;
+}
+table.nowraplinks td.navbox-list ul{
+  list-style-type: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+table.nowraplinks td.navbox-list li{
+  /*float: left;*/
+  margin: 2px;
+}
+table.nowraplinks.navbox-subgroup th.navbox-group{
+  text-align: right;
+  padding: 5px;
+}
+table.nowraplinks.navbox-subgroup td.navbox-list{
+  text-align: left;
+  padding: 5px;
+}
+table.nowraplinks a:visited {
+    color: #0b0080;
+}
+table.nowraplinks a{
+    text-decoration: none;
+    color: #0645ad;
+    background: none;
+}
+table.nowraplinks.hlist.collapsible.autocollapse.navbox-inner {
+    margin: 15px auto !important;
+}
+.navbox-subgroup .navbox-group, .navbox-subgroup .navbox-abovebelow {
+    background-color: #e6e6ff;
+}
+.navbox-abovebelow, th.navbox-group, .navbox-subgroup .navbox-title {
+    background-color: #ddddff;
+}
+.navbox-odd {
+    background-color: transparent;
+}
+.navbox-even {
+    background-color: #f7f7f7;
+}
+.navbox th, .navbox-title {
+    background-color: #ccccff;
+}
+.hlist dd, .hlist li{
+	margin: 0;
+    display: inline;
+}
+.hlist dd:after, .hlist li:after {
+    content: &quot; . &quot;;
+    font-weight: bold;
+	vertical-align: text-bottom;
+}
+.hlist dt li:first-child:before, .hlist  li dd:first-child:before, .hlist li dt:first-child:before, .hlist li li:first-child:before {
+    content: &quot; (&quot;;
+    font-weight: normal;
+}
+.hlist dt li:last-child:after, .hlist li dd:last-child:after, .hlist li dt:last-child:after, .hlist li li:last-child:after {
+    content: &quot;)&quot;;
+    font-weight: normal;
+}
+.hlist li:last-child:after {
+    content: &quot;&quot;;
+    font-weight: bold;
+}
+.hlist ul ul{
+	display: inline;
+}
+.hlist ul{
+	margin: 0px;
+}
+table.nowraplinks th.navbox-title{
+	/*display: none;*/
+}
+/* End of Catalog tables CSS */
+/* Table in accordion Wikitable CSS */
+table.wikitable {
+    background-color: #f8f9fa;
+    color: #222;
+    margin: 1em 0;
+    border: 1px solid #a2a9b1;
+    border-collapse: collapse;
+}
+.card-body table.wikitable{
+    background-color: #f8f9fa;
+    color: #222;
+    margin: 1em 0;
+    border: 1px solid #a2a9b1;
+    border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	/*white-space: pre-wrap;*/
+}
+.card-body table.wikitable th, .card-body table.wikitable td{
+  border: 1px solid #ccc !important;
+}
+.card-body table.wikitable a:visited {
+    color: #0b0080 !important;
+}
+.card-body table.wikitable a {
+    text-decoration: none !important;
+    color: #0645ad !important;
+    background: none !important;
+}
+.card-body table.wikitable &gt; tr &gt; th, .card-body table.wikitable &gt; * &gt; tr &gt; th {
+    background-color: #eaecf0;
+    text-align: center;
+}
+.card-body table.wikitable &gt; tr &gt; th, .card-body table.wikitable &gt; tr &gt; td, .card-body table.wikitable &gt; * &gt; tr &gt; th, .card-body table.wikitable &gt; * &gt; tr &gt; td {
+    border: 1px solid #a2a9b1;
+    padding: 0.2em 0.4em;
+}
+/* End of Table in accordion Wikitable CSS  */
 /*End of Image Info Section*/
 @media screen and (max-width: 737px){
 #box, #appBox {
@@ -5871,32 +6053,6 @@ $('.image-popup-no-margins').magnificPopup({
 	
 
 //]]></script>
-
-
-<!-- Open external links in new tab using this javascript -->
-<script type='text/javascript'>
-    $(document).ready(function() {
-        $(&quot;a[href^=&#39;http://&#39;]&quot;).each(
-            function() {
-                if (this.href.indexOf(location.hostname) == -1) {
-                    $(this).attr(&#39;target&#39;, &#39;_blank&#39;);
-                }
-            }
-        );
-        $(&quot;a[href^=&#39;https://&#39;]&quot;).each(
-            function() {
-                if (this.href.indexOf(location.hostname) == -1) {
-                    $(this).attr(&#39;target&#39;, &#39;_blank&#39;);
-                }
-            }
-        );
-    });
-</script>
-
-
-
-
-
 
   </head>
   <body>
