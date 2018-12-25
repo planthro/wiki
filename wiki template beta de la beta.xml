@@ -4879,6 +4879,11 @@ function getUrlParam(param){
 .mfp-close{
 	opacity: 1 !important;
 }
+img.mfp-img{
+	height: auto !important;
+	max-width: 55% !important;
+	/*max-height: none !important;*/
+}
 #box {
     margin: 0 auto;
     display: none;
@@ -5678,6 +5683,7 @@ table.wikitable {
     margin: 1em 0;
     border: 1px solid #a2a9b1;
     border-collapse: collapse;
+	word-break: normal;
 }
 .card-body table.wikitable{
     background-color: #f8f9fa;
@@ -5686,8 +5692,7 @@ table.wikitable {
     border: 1px solid #a2a9b1;
     border-collapse: collapse;
 	width: 100%;
-	table-layout: fixed;
-	/*white-space: pre-wrap;*/
+	word-break: normal;
 }
 .card-body table.wikitable th, .card-body table.wikitable td{
   border: 1px solid #ccc !important;
