@@ -4872,6 +4872,26 @@ function getUrlParam(param){
 </script>
 
 <style> /* CustomCSS */
+.wikipost a[href=&quot;javascript:void(0)&quot;]:hover {
+    color: #2f2f2f!important;
+}
+.wikipost a[href=&quot;javascript:void(0)&quot;] {
+    text-decoration: none;
+    color: #2f2f2f !important;
+    cursor: unset;
+}
+ol.references {
+  list-style-type: inherit !important;
+}
+sup.reference{
+	display: none;
+}
+sup.Inline-Template{
+	display: none;
+}
+div.hatnote.navigation-not-searchable{
+	display: none;
+}
 .mfp-bg{
 	opacity: 0.94 !important;
 	background: #000;
@@ -5328,7 +5348,9 @@ div.custom-popup::-webkit-scrollbar-thumb {
 .wikipost .section{
     margin-bottom: 20px;
 }
-
+.wikipost img.mw-mmv-final-image:first-of-type {
+    display: none;
+}
 #toc ul li{
     text-align: left;
 }
@@ -5357,6 +5379,11 @@ div.tright{
     float: right;
     clear: right;
     margin: 0.5em 0 1.3em 1.4em;
+}
+div.tleft {
+    float: left;
+    clear: left;
+    margin: 0.3em 1.4em 0.5em 0;
 }
 a.external.text, a.external.free {
     background-repeat: no-repeat !important;
@@ -5560,12 +5587,12 @@ span.mw-ext-cite-error{
 	display: none;
 }
 /* CSS to hide the view and edit links on sidebar container divs. */
-div#Caption div:first-child {
+div#Caption div:first-child{
     display: none;
 }
-/*#Contains-Timeline-Scale-Notes small {
+#Contains-Timeline-Scale-Notes div:first-child &gt; small {
     display: none;
-}*/
+}
 /* End of CSS to hide the view and edit links on sidebar container divs. */
 /* Catalog tables CSS */
 table.nowraplinks{
@@ -5672,9 +5699,9 @@ table.nowraplinks.hlist.collapsible.autocollapse.navbox-inner {
 .hlist ul{
 	margin: 0px;
 }
-table.nowraplinks th.navbox-title{
-	/*display: none;*/
-}
+/*.card-body table:first-of-type th.navbox-title:first-of-type{
+	display: none;
+}*/
 /* End of Catalog tables CSS */
 /* Table in accordion Wikitable CSS */
 table.wikitable {
@@ -5712,6 +5739,15 @@ table.wikitable {
 .card-body table.wikitable &gt; tr &gt; th, .card-body table.wikitable &gt; tr &gt; td, .card-body table.wikitable &gt; * &gt; tr &gt; th, .card-body table.wikitable &gt; * &gt; tr &gt; td {
     border: 1px solid #a2a9b1;
     padding: 0.2em 0.4em;
+}
+#Introduction .hatnote{
+	display: none;
+}
+div.floatright {
+    float: right;
+}
+div.floatleft {
+    float: left;
 }
 /* End of Table in accordion Wikitable CSS  */
 /*End of Image Info Section*/
@@ -5956,6 +5992,28 @@ $('.image-popup-no-margins').magnificPopup({
               open: function(){
 				  $("body").css("overflow", "hidden");
 				  //$("#catalog table").addClass("table-responsive");
+				  //removeCatalogExtraHeading
+                    var accordions = $("#catalog").find(".accordion");
+                    var tables = null;
+                    var innerTables = null;
+                    var table = null;
+                    for(var j=0;j<accordions.length;j++){
+                        //console.log(accordions[j]);
+                        tables = $(accordions[j]).find(".card-body").children("table.collapsible");
+                        for(var i=0;i<tables.length;i++){
+                          innerTables = $(tables[i]).find("table.collapsible");
+                          if(innerTables.length){
+                            table = $(tables[i]).find('th.navbox-title')[0];
+                            //console.log(table);
+                            $(table).css({"display":"none"});
+                          }
+                          else{
+                            table = $(tables[i]).find('th.navbox-title')[0];
+                            //console.log(table);
+                            $(table).css({"display":"none"});
+                          }
+                        }
+                    }
               },
               close:function(){
 				$("body").css("overflow", "initial");
@@ -6338,6 +6396,7 @@ $('.image-popup-no-margins').magnificPopup({
                       <b:widget-setting name='commentLabel'>komentar</b:widget-setting>
                       <b:widget-setting name='showShareButtons'>false</b:widget-setting>
                       <b:widget-setting name='authorLabel'>By</b:widget-setting>
+                      <b:widget-setting name='disableGooglePlusShare'>false</b:widget-setting>
                       <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
                       <b:widget-setting name='timestampLabel'>on</b:widget-setting>
                       <b:widget-setting name='reactionsLabel'>Reaksi:</b:widget-setting>
