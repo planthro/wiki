@@ -6431,7 +6431,7 @@ $('.image-popup-no-margins').magnificPopup({
           <!-- LOGO -->
           <div class='logo text-center'>
             <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-              <b:widget id='Header1' locked='true' title='devWIKI (Header)' type='Header' version='1'>
+              <b:widget id='Header1' locked='true' title='#planthro WIKI | Platform anthropocene Inc. (Header)' type='Header' version='1'>
                 <b:widget-settings>
                   <b:widget-setting name='displayUrl'>https://1.bp.blogspot.com/-0cLCUOf53Rc/XTxwZoqtGfI/AAAAAAAACz4/sg7NY6pq6c07vSIm4Zj1kslDQndXBnPXACLcBGAs/s1600/%2523planthro%2BWIKI%2BEncyclopedia%2Bof%2BHuman-Earth%2BInteraction.png</b:widget-setting>
                   <b:widget-setting name='displayHeight'>242</b:widget-setting>
@@ -7617,7 +7617,7 @@ on sustainability, mitigation and adaptive strategies.
       gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
         if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
           gapi.iframes.getContext().openChild({
-              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d3016253585513797144\x26blogName\x3ddevWIKI\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://devplanthrowiki.blogspot.com/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttps://devplanthrowiki.blogspot.com/\x26vt\x3d-1615836633944035323&#39;,
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d8894679474271622220\x26blogName\x3d%23planthro+WIKI+%7C+Platform+anthropocen...\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://wiki.planthro.org/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttps://wiki.planthro.org/\x26vt\x3d-506277606683910494&#39;,
               where: document.getElementById(&quot;navbar-iframe-container&quot;),
               id: &quot;navbar-iframe&quot;
           });
