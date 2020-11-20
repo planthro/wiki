@@ -38,7 +38,7 @@ function initWikiFetch(lang, topic){
     if(sections[i].number.indexOf(".") == -1){
       section = getWikiArticleSection(sections[i].index, title);
 //      console.log(section);
-      Logger.log(sections[i].anchor);
+//      Logger.log(sections[i].anchor);
       section = extractCitationsAndReplace(section);
       section = detachUnwantedDivFromSection(section);
       article.sections[sections[i].anchor] = section;
@@ -243,7 +243,7 @@ function extractCitationsAndReplace(html){
   }
   citations_from_html_copy.splice(0, matches.length);
 //  Logger.log("Reduced Citations Lengths: " +citations_from_html_copy.length);
-  Logger.log(html);
+//  Logger.log(html);
   return html;
 }
 
@@ -252,7 +252,7 @@ function extractCiteLinks(html){
   if(references && references[0]){
     for(var i = 0; i < references.length; i++){
       references[i].detach();
-      Logger.log("Detached: "+i);
+//      Logger.log("Detached: "+i);
     }
   }
   
@@ -289,7 +289,7 @@ function extractCiteLinks(html){
 //    console.log(global.citelinks_copy);
     // Logger.log(global.citelinks[0] + " , " + global.citelinks[10]);
 //  }
-  Logger.log("global.citelinks.length: "+global.citelinks.length);
+//  Logger.log("global.citelinks.length: "+global.citelinks.length);
 }
 
 function extractCatalogTables(html){
@@ -383,7 +383,10 @@ function extractImageInfo(imageData, i){
   if(imageInfo.extmetadata.DateTimeOriginal){
     imageCreatedDate = imageInfo.extmetadata.DateTimeOriginal.value;
   }
-  var imageLicenseShortName = imageInfo.extmetadata.LicenseShortName.value;
+  var imageLicenseShortName = "";
+  if(imageInfo.extmetadata.LicenseShortName){
+    imageLicenseShortName = imageInfo.extmetadata.LicenseShortName.value;
+  }
   var imageFileName = imageInfo.canonicaltitle;
   var imageLat = "";
   if(imageInfo.extmetadata.GPSLatitude) {
