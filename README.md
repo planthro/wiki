@@ -4,7 +4,8 @@ This is the template and content of the Platform anthropocene (#planthro) WIKI a
 View the implementation on wiki.planthro.org
 
 
-Google script description
+Google script files and description
+
 1. appscript.json
 Dependencies, settings.
 
@@ -12,7 +13,7 @@ Dependencies, settings.
 Start point of the script, init() is the entry function. Checks if the user is authorized, if yes then executes.s
 
 3. update.gs
-Not being used << now being used, description to be updated.
+Logic for searching and updating blogger post. 
 
 4. service.gs
 Request configuration and cleaning up of wiki pages fetched.
